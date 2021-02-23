@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Security</title>
+</head>
+<body>
+<style>
+    .main{width:350px; height: 250px; margin:0 auto;border: 1px solid grey;margin-top:10%;}
+    .sign{width:90%;height:30px;background-color:grey;border:none;margin-top:100px; color:white;}
+    .mrg{border:none;}
+     form{padding:50px 0px 0px 30px;}
+    .in{line-height: 1.5;}
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="main">
+            <form th:action="@{/login}" method="post" class="login">
+                <div class="in"><label> User Name : <input type="text" name="username" class="mrg"/> </label></div>
+                <div lass="in"><label> &nbsp;&nbsp;&nbsp; Password: <input type="password" name="password" class="mrg"/> </label></div>
+                <div><input type="submit" class="sign" value="Sign In"/></div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>
+
+

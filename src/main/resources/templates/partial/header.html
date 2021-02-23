@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Header</title>
+</head>
+<style>
+    ul li a{
+        color:white;
+    }
+</style>
+<body>
+<nav class="navbar navbar-expand-lg   " style="background-color: lightgrey;">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="/">Customers Service</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li><li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/showNewCustomerForm">Add</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Update</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1">Settings</a>
+                </li>
+            </ul>
+
+            <form class="d-flex" style="margin-left: 70%;" th:action="@{/logout}" method="post">
+                <input type="submit" value="Sign Out"/>
+            </form>
+        </div>
+    </div>
+</nav>
+</body>
+</html>
